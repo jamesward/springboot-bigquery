@@ -1,14 +1,12 @@
 package demo
 
 import com.google.cloud.bigquery.BigQuery
-import com.google.cloud.bigquery.FieldValueList
 import com.google.cloud.bigquery.QueryJobConfiguration
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
-import reactor.kotlin.core.publisher.toFlux
 
 data class Question(val url: String, val title: String, val body: String, val tags: Sequence<String>, val viewCount: Int, val favoriteCount: Int)
 
